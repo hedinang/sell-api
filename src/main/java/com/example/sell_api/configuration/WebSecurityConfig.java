@@ -129,16 +129,16 @@ public class WebSecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> servletContainer() {
-        return factory -> factory.addAdditionalTomcatConnectors(createHttpConnector());
-    }
-
-    private Connector createHttpConnector() {
-        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
-        connector.setScheme("http");
-        connector.setPort(8000);  // Set the port for HTTP
-        connector.setSecure(false);
-        return connector;
-    }
+//    @Bean
+//    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> servletContainer() {
+//        return factory -> factory.addAdditionalTomcatConnectors(createHttpConnector());
+//    }
+//
+//    private Connector createHttpConnector() {
+//        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+//        connector.setScheme("http");
+//        connector.setPort(8000);  // Set the port for HTTP
+//        connector.setSecure(false);
+//        return connector;
+//    }
 }
